@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="En-en" class="dark-theme">
+@include('partials/head.html')
+<body>
+  @include('partials/header.html')
+  <div class="overlayEffect">
+    <img src="img/overlay.webp" alt="">
+  </div>
+  <main>
+    <div class="bubble bubble--bottom"></div>
+    <div class="bubble bubble--top bubble--smaller "></div>
+    <div class="bubble bubble--left"></div>
+    <div class="bubble bubble--right "></div>
+    @include('partials/home.html')
+    <section class="section">
+      <div class="section-container container">
+        <div class="section-heading">
+          Buy Crypto
+        </div>
+        <div class="section-body">
+          <div class="section-col section-col--image_small">
+            <img src="img/crypto/cryptoSectionImage.webp" alt="sectionImage">
+          </div>
+          <div class="section-col section-col--gap">
+            <div class="section-header col-header">
+              <h2 class="section-title def-title">
+                Buy Crypto
+              </h2>
+              <p class="def-text">
+                Buy Bitcoin, Ethereum and over <span class="def-text__hl">50 other</span> coinsand over <span class="def-text__hl">400К tokens</span>
+              </p>
+            </div>
+            <a href="#" class="button">
+              <span class="button-text">
+                Get Started
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section--mb">
+      <div class="section-container container">
+        <div class="section-body section-body--no-gap">
+          <div class="section-col section-col--gap">
+            <div class="section-header col-header">
+              <h2 class="section-title def-title">
+                Exchange Crypto
+              </h2>
+              <p class="def-text">
+                Access instant crypto exchanges for over <span class="def-text__hl">
+                  50 coins
+                </span> throughour dedicated web platform
+              </p>
+            </div>
+            <a href="#" class="button">
+              <span class="button-text">
+                Get Started
+              </span>
+            </a>
+          </div>
+          <div class="section-col section-col--image_small">
+            <img src="img/exchange/exchangeSectionImage.webp" alt="sectionImage">
+          </div>
+        </div>
+      </div>
+    </section>
+    @include('partials/start.html')
+    <div class="bottomMountainImage">
+      <img src="img/linedMountain.webp" alt="bottomMountainImage">
+    </div>
+    <div class="linedCircle">
+      <img src="img/linedCircle.webp" alt="linedCircle">
+    </div>
+  </main>
+  @include('partials/footer.html')
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js" integrity="sha512-ILrDRgEiIojcsKyBy12ZU7MtOf78F2fj3vve/AN5i94iXLQ8PZN7IJYPphmAGdwZmTv4N+OzY3trvqGIEY87VA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,33 @@
+.home {
+  padding: 3.75rem 0;
+  margin-bottom: 200px;
+  &-body {
+    display: grid;
+    grid-template-columns: .55fr 1fr;
+    align-items: center;
+    grid-gap: 40px;
+  }
+
+  &-title {
+    text-transform: uppercase;
+    letter-spacing: 12px;
+  }
+  &-col {
+    &--gap {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 2rem;
+    }
+  }
+  &-bottom {
+    display: flex;
+    align-items: center;
+    grid-gap: 5rem;
+  }
+  &-badget {
+    width: 60px;
+    img {
+      display: block;
+    }
+  }
+}

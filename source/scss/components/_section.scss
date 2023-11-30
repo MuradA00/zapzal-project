@@ -1,0 +1,42 @@
+.section {
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &--mb {
+    margin-bottom: 172px !important;
+  }
+  &-body {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: clamp(60px, 6.25vw, 100px);
+    &--no-gap {
+      grid-gap: 0;
+      grid-template-columns: .85fr 1fr;
+    }
+  }
+  &-heading {
+    color: #6E46E5;
+    opacity: .15;
+    font-weight: 900;
+    letter-spacing: 1.25rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -150px;
+    font-size: clamp(100px, 12.5vw, 200px);
+    width: 100%;
+    text-align: center;
+  }
+  &-col {
+    &--image {
+      &_small {
+        img {
+          height: 390px;
+          display: block;
+        }
+      }
+    }
+  }
+}

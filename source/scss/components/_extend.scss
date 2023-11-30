@@ -1,0 +1,134 @@
+.button {
+  --button-h: 50px;
+  --cl-text: #503100;
+
+  width: fit-content;
+  @include dfc;
+  text-align: center;
+  min-height: var(--button-h);
+  padding: 0 2.75rem;
+  border-radius: 5.625rem;
+  background-image: var(--button-gradient);
+  box-shadow: 0rem 0rem 1.875rem 0rem rgba(255, 209, 25, 0.50);
+  transition: all 400ms ease;
+
+  @include hover {
+    box-shadow: 0rem 0rem 2.25rem 0rem rgba(255, 209, 25, 0.80);
+  }
+  &-text {
+    color: var(--cl-text);
+    font-size: var(--t-md);
+    font-weight: 700;
+    letter-spacing: 1.8px;
+  }
+
+  &--smaller {
+    --button-h: 2.5rem;
+  }
+  @include mobile {
+    font-size: var(--t-base);
+  }
+}
+
+.def-title {
+  font-size: clamp(2.25rem, 3.75vw, 3.75rem);
+  letter-spacing: 6px;
+  font-weight: 900;
+  line-height: 133%;
+  color: rgba(var(--cl-1), 1);
+  &__hl {
+    color: rgba(var(--cl-y), 1);
+  }
+}
+
+.def-text {
+  font-size: clamp(var(--t-base), 1.125vw, var(--t-md));
+  font-weight: 300;
+  letter-spacing: 1.8px;
+  line-height: 166%;
+  &__hl {
+    font-weight: 700;
+  }
+}
+
+.bubble {
+  width: 720px;
+  height: 720px;
+  position: absolute;
+  opacity: .1;
+  filter: blur(130px);
+  background-color: rgba(var(--cl-bl), 1);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: all 300ms ease;
+  &--smaller {
+    width: 450px;
+    height: 450px;
+  }
+  &--left {
+    left: -200px;
+    top: 400px;
+  }
+  &--right {
+    top: 200px;
+    right: -200px;
+  }
+  &--top {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -165px;
+  }
+  &--bottom {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+}
+
+.col-header {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1.5rem;
+  margin-bottom: clamp(1.75rem, 2.5vw, 40px);
+}
+
+.bottomMountainImage {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 750px;
+  @include dfc;
+  pointer-events: none;
+  z-index: -1;
+  &::after {
+    @include pseudo;
+    width: 100%;
+    height: 174px;
+    background: var(--bottom-image-gradient);
+    bottom: -20px;
+    left: 0;
+  }
+  img {
+    display: block;
+  }
+}
+
+.linedCircle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  img {
+    max-width: 200px;
+  }
+}
+
+.overlayEffect {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 95%;
+  width: 90%;
+  pointer-events: none;
+}
