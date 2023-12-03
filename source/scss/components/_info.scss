@@ -1,0 +1,117 @@
+.info {
+  --file-item: 128px;
+
+  margin-bottom: 140px;
+  padding-top: clamp(24px, 3.5vw, 3.5rem);
+
+  &-descr {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+  }
+  &-col {
+    img {
+      display: block;
+    }
+  }
+   &-box {
+    display: grid;
+    grid-template-columns: var(--col1-w) var(--col2-w);
+    align-items: center;
+
+    &--first {
+      --col1-w: .55fr;
+      --col2-w: .45fr;
+
+      .info {
+        &-col {
+          &:nth-child(2) {
+            margin-left: auto;
+            max-width: 405px;
+          }
+        }
+      }
+    }
+    &--second {
+      grid-gap: 36px;
+      --col1-w: .41fr;
+      --col2-w: 1fr;
+    }
+   }
+   &-title {
+    margin-bottom: 14px;
+    color: rgba(var(--cl-1), 1);
+    font-size: clamp(35px, 3.75vw, 60px);
+    font-weight: 900;
+    text-transform: uppercase;
+   }
+   &-files {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+    grid-gap: 1.25rem;
+
+    margin-bottom: 2.25rem;
+    &__item {
+      min-height: var(--file-item);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      grid-gap: 1.25rem;
+    }
+    &__icon {
+      width: 142px;
+      min-height: var(--file-item);
+      @include dfc;
+      margin: 0 auto;
+
+      border: 5px solid var(--file-icon-border);
+      background-color: rgba(var(--cl-bl), .1);
+      border-radius: 10px;
+    }
+    &__name {
+      text-align: center;
+      font-size: var(--t-md);
+      font-weight: 400;
+      color: var(--file-item-text);
+    }
+   }
+}
+
+.dark-theme {
+  .info {
+    &__name {
+      color: rgba(var(--cl-y), 1);
+    }
+  }
+}
+
+@include tablet {
+  .info {
+    --file-item: 92px;
+    margin-bottom: 50px;
+    &-files {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      &__icon {
+        width: 104px;
+        img {
+          max-width: 34px;
+        }
+      }
+    }
+    &-box {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 30px;
+    }
+    &-col {
+      &--adaptive {
+        max-width: 346px;
+        margin: 0 auto;
+      }
+      &--image {
+        display: none;
+      }
+    }
+  }
+}

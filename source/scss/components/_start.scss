@@ -24,3 +24,11 @@
     align-self: center;
   }
 }
+
+@include tablet {
+  .start {
+    &-loading {
+      display: none;
+    }
+  }
+}

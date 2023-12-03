@@ -13,9 +13,11 @@
 }
 
 @include font-face(Gilroy, Gilroy-Light, 300, normal);
+@include font-face(Gilroy, Gilroy-Regular, 400, normal);
 @include font-face(Gilroy, Gilroy-Bold, 700, normal);
 @include font-face(Gilroy, Gilroy-Heavy, 800, normal);
 @include font-face(Gilroy, Gilroy-Black, 900, normal);
+// @import url('https://fonts.cdnfonts.com/css/gilroy-bold');
 
 // 100 – Thin || Hairline
 // 200 – Extra Light || Ultra Light || Thin

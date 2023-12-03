@@ -51,6 +51,7 @@
     min-height: 60px;
     padding: 0 174px 0 2rem;
     background-color: transparent;
+    letter-spacing: 1.7px;
 
     font-size: 17px;
     font-weight: 300;
@@ -61,6 +62,16 @@
     }
     &::placeholder {
       color: rgba(var(--cl-1),1);
+    }
+  }
+}
+
+@include tablet {
+  .footer {
+    font-size: 12px;
+
+    &-square {
+      display: none;
     }
   }
 }

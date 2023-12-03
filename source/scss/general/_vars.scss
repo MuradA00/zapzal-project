@@ -27,6 +27,12 @@
   --t-xxl-2: 28px;
   --t-xxl-3: 32px;
   --t-xxl-4: 36px;
+
+  --fw300: 'Gilroy-Light', sans-serif;
+  --fw500: 'Gilroy-Medium', sans-serif;
+  --fw400: 'Gilroy-Regular', sans-serif;
+  --fw800: 'Gilroy-Heavy', sans-serif;
+  --fw700: 'Gilroy-Bold', sans-serif;
 // --------------- default scroll variable ---------------
 // --------------- default slect variable ---------------
 // --------------- default font-family variable ---------------
@@ -39,6 +45,8 @@
   --bg-body: #{HexToRGB(#ffffff)};
   --cl-bl: #{HexToRGB(#1925E8)};
   --bottom-image-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+  --file-icon-border: rgba(var(--cl-bl), .15);
+  --file-item-text: rgba(var(--cl-bl), 1);
 // --------------- default background cl variable ------------
 // --------------- default border cl variable ----------------
 // --------------- gradient background cl variable -----------
@@ -51,6 +59,8 @@
     --cl-2: #{HexToRGB(#000000)};
     --cl-footer-text: #{HexToRGB(#B8B0CD)};
     --bottom-image-gradient: linear-gradient(180deg, rgba(9, 16, 22, 0.00) 0%, #091016 100%);
+    --file-icon-border: rgba(var(--cl-bl), .2);
+    --file-item-text: rgba(var(--cl-y), 1);
   }
 }
 

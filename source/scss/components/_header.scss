@@ -11,6 +11,7 @@
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
+    z-index: 1;
   }
   &-actions {
     display: flex;
@@ -80,5 +81,19 @@
         }
       }
     }
+  }
+}
+
+@include tablet {
+  .header {
+    padding: 0;
+    &-logo {
+      max-width: 92px;
+      position: initial;
+      transform: translateX(0);
+    }
+  }
+  .nav {
+    display: none;
   }
 }
