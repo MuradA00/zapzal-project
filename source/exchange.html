@@ -3,78 +3,39 @@
 @include('partials/head.html')
 <body>
   @include('partials/header.html')
-  <div class="overlayEffect">
-    <img src="img/overlay.webp" alt="">
-  </div>
   <main>
-    <div class="bubble bubble--bottom"></div>
+    <!-- <div class="bubble bubble--bottom"></div>
     <div class="bubble bubble--top bubble--smaller "></div>
     <div class="bubble bubble--left"></div>
-    <div class="bubble bubble--right "></div>
-    @include('partials/home.html')
-    <section class="section">
-      <div class="section-container container">
-        <div class="section-heading">
-          Buy Crypto
-        </div>
-        <div class="section-body">
-          <div class="section-col section-col--adaptive section-col--image_small">
-            <img src="img/crypto/cryptoSectionImage.webp" alt="sectionImage">
+    <div class="bubble bubble--right "></div> -->
+
+    <section class="content">
+      <div class="content-container container">
+        <div class="content-body">
+          <div class="content-col">
+            <h1 class="content-col__heading">
+              Use our fast <span class="content-col__heading-hl">Cryptocurrency</span>
+            </h1>
+            <p class="content-col__text def-text">
+              Zapzal platform provides lightning-fast cryptocurrency exchanges, enabling you to seamlessly trade digital assets without the burden of registrations, KYC processes, or lengthy wait times. As a trusted cryptocurrency-to-cryptocurrency exchange, Zapzal has established a strong reputation in the market over time.
+            </p>
           </div>
-          <div class="section-col section-col--gap">
-            <div class="section-header col-header">
-              <h2 class="section-title def-title">
-                Buy Crypto
-              </h2>
-              <p class="def-text">
-                Buy Bitcoin, Ethereum and over <span class="def-text__hl">50 other</span> coinsand over <span class="def-text__hl">400К tokens</span>
-              </p>
-            </div>
-            <a href="#" class="button">
-              <span class="button-text">
-                Get Started
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section section--mb">
-      <div class="section-container container">
-        <div class="section-body section-body--no-gap">
-          <div class="section-col section-col--gap">
-            <div class="section-header col-header">
-              <h2 class="section-title def-title">
+          <div class="content-col">
+            <div class="content-widget">
+              <div class="content-widget__heading">
                 Exchange Crypto
-              </h2>
-              <p class="def-text">
-                Access instant crypto exchanges for over <span class="def-text__hl">
-                  50 coins
-                </span> throughour dedicated web platform
-              </p>
+              </div>
+              <div class="content-widget__iframe">
+                <iframe width="100%" height="100%" frameborder='none' allow="camera" src="https://widget.changelly.com?from=*&to=*&amount=0.1&address=&fromDefault=eth&toDefault=bnbbsc&merchant_id=2-dM1AUxpNFRKWHV&payment_id=&v=3">Can't load widget</iframe>
+              </div>
             </div>
-            <a href="#" class="button">
-              <span class="button-text">
-                Get Started
-              </span>
-            </a>
-          </div>
-          <div class="section-col section-col--image_small">
-            <img src="img/exchange/exchangeSectionImage.webp" alt="sectionImage">
           </div>
         </div>
       </div>
     </section>
-    @include('partials/start.html')
-    <div class="bottomMountainImage">
-      <img src="img/linedMountain.webp" alt="bottomMountainImage">
-    </div>
-    <div class="linedCircle">
-      <img src="img/linedCircle.webp" alt="linedCircle">
-    </div>
+
   </main>
   @include('partials/footer.html')
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js" integrity="sha512-ILrDRgEiIojcsKyBy12ZU7MtOf78F2fj3vve/AN5i94iXLQ8PZN7IJYPphmAGdwZmTv4N+OzY3trvqGIEY87VA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/main.js"></script>
 </body>
 

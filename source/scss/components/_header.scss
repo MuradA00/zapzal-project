@@ -87,6 +87,16 @@
 @include tablet {
   .header {
     padding: 0;
+    &-container {
+      padding: 0;
+      padding-right: 1rem;
+    }
+    &-button {
+      padding: 0 1.25rem;
+    }
+    &-actions {
+      grid-gap: 1.25rem;
+    }
     &-logo {
       max-width: 92px;
       position: initial;
