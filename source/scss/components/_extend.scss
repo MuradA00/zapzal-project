@@ -157,3 +157,17 @@
     }
   }
 }
+@include mobile {
+  .bubble {
+    &--top {
+      width: 300px;
+      height: 300px;
+      opacity: .5 !important;
+    }
+    &--bottom {
+      width: 400px;
+      height: 400px;
+      display: none;
+    }
+  }
+}

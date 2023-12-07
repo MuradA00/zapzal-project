@@ -182,6 +182,10 @@ input[type="number"] {
 
 main {
   overflow: hidden;
+  padding-top: 232px;
+  @include tablet {
+    padding-top: 140px;
+  }
   & > * {
     position: relative;
   }
