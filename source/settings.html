@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="En-en" class="dark-theme">
+@include('partials/head.html')
+<body>
+  @include('partials/menu.html')
+  @include('partials/header.html')
+  <main>
+    <div class="bubble bubble--bottom"></div>
+    <div class="bubble bubble--top bubble--smaller "></div>
+    <div class="bubble bubble--left"></div>
+    <div class="bubble bubble--right "></div>
+
+    <section class="settings">
+      <div class="settings-container container">
+        <div class="settings-body">
+          <div class="settings-panel">
+            <div class="settings-panel__header">
+              Settings
+            </div>
+            <div class="settings-panel__block">
+              <div class="settings-panel__block-header">
+                Backup
+              </div>
+              <div class="settings-panel__item wallet-tabs__item wallet-tabs__item--active" data-button="0">
+                <div class="settings-panel__item-icon">
+                  <img src="img/download.svg" alt="settings-icon">
+                </div>
+                <div class="settings-panel__item-text">
+                  Download backup
+                </div>
+              </div>
+              <div class="settings-panel__item wallet-tabs__item" data-button="1">
+                <div class="settings-panel__item-icon">
+                  <img src="img/restore.svg" alt="settings-icon">
+                </div>
+                <div class="settings-panel__item-text">
+                  Restore
+                </div>
+              </div>
+            </div>
+            <div class="settings-panel__block">
+              <div class="settings-panel__block-header">
+                Security
+              </div>
+              <div class="settings-panel__item wallet-tabs__item" data-button="2">
+                <div class="settings-panel__item-icon">
+                  <img src="img/password.svg" alt="settings-icon">
+                </div>
+                <div class="settings-panel__item-text">
+                  Change password
+                </div>
+              </div>
+              <div class="settings-panel__item">
+                <div class="settings-panel__item-icon">
+                  <img src="img/key.svg" alt="settings-icon">
+                </div>
+                <div class="settings-panel__item-text">
+                  Ask password on transaction
+                </div>
+                <div class="settings-panel__checkbox checkbox">
+                  <input type="checkbox">
+                </div>
+              </div>
+              <div class="settings-panel__item settings-panel__item--no-border">
+                <div class="settings-panel__item-icon">
+                  <img src="img/key.svg" alt="settings-icon">
+                </div>
+                <div class="settings-panel__item-text">
+                  Set session timeout to 15 mins
+                </div>
+                <div class="settings-panel__checkbox checkbox">
+                  <input type="checkbox">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="settings-contents">
+            <div class="settings-content wallet-content wallet-content--active" data-content="0">
+              <div class="settings-content__header">
+                Zapzal Wallet Backup
+              </div>
+              <div class="settings-content__info">
+                <p>
+                  The backup contains all your private keys that give you access to your money.⚠️⚠️⚠️ Zapzal cannot restore your backup.️ Keep it safe and secure.
+                </p>
+              </div>
+              <button class="settings-content__button button">
+                <span class="button-text">
+                  Download backup file
+                </span>
+              </button>
+            </div>
+            <div class="settings-content wallet-content" data-content="1">
+              <div class="settings-content__header">
+                Restore with Zapzal backup
+              </div>
+              <div class="settings-content__info">
+                <p>
+                  Upload Zapzal backup file or text to restore your wallets.They will be merged to your current backup.
+                </p>
+              </div>
+              <div class="settings-browse">
+                <div class="settings-browse__icon">
+                  <img src="img/folderIcon.svg" alt="folderIcon">
+                </div>
+                <button class="settings-browse__button">
+                  Browse
+                </button>
+              </div>
+              <div class="textarea textarea--flex">
+                <div class="textarea-label">
+                  Backup password
+                </div>
+                <div class="textarea-input">
+                  <div class="settings-browse__password-input textarea">
+                    <button class="textarea-password">
+                      <img src="img/eyeIcon.svg" alt="eyeIcon">
+                    </button>
+                    <input type="password" placeholder="***********">
+                  </div>
+                </div>
+              </div>
+              <button class="settings-content__button button" style="min-width: 304px">
+                <span class="button-text">
+                  Restore
+                </span>
+              </button>
+            </div>
+            <div class="settings-content wallet-content" data-content="2">
+              <div class="settings-content__header">
+                Change Password
+              </div>
+              <div class="settings-content__info">
+                <p>
+                  You will only change the password on this device. Don't forget to do the sameon your other devices with Zapzal app.
+                </p>
+              </div>
+              <div class="textarea-inputs">
+                <div class="textarea textarea--flex">
+                  <div class="textarea-label">
+                    Backup password
+                  </div>
+                  <div class="textarea-input">
+                    <div class="settings-browse__password-input textarea">
+                      <button class="textarea-password">
+                        <img src="img/eyeIcon.svg" alt="eyeIcon">
+                      </button>
+                      <input type="password" placeholder="***********">
+                    </div>
+                  </div>
+                </div>
+                <div class="textarea textarea--flex">
+                  <div class="textarea-label">
+                    New password
+                  </div>
+                  <div class="textarea-input">
+                    <div class="settings-browse__password-input textarea">
+                      <button class="textarea-password">
+                        <img src="img/eyeIcon.svg" alt="eyeIcon">
+                      </button>
+                      <input type="password" placeholder="Enter new password">
+                    </div>
+                  </div>
+                </div>
+                <div class="textarea textarea--flex">
+                  <div class="textarea-label">
+                    Reoeat new password
+                  </div>
+                  <div class="textarea-input">
+                    <div class="settings-browse__password-input textarea">
+                      <button class="textarea-password">
+                        <img src="img/eyeIcon.svg" alt="eyeIcon">
+                      </button>
+                      <input type="password" placeholder="Enter new password">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="settings-content__button button" style="min-width: 304px">
+                <span class="button-text">
+                  Restore
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  @include('partials/footer.html')
+  <script src="js/main.js"></script>
+</body>
+
+</html>
+

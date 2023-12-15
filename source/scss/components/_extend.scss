@@ -171,3 +171,248 @@
     }
   }
 }
+
+.textarea {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 5px;
+  &-inputs {
+    .textarea {
+      &-label {
+        flex: 0 0 210px;
+        text-align: left;
+      }
+    }
+  }
+  &--flex {
+    align-items: center;
+    flex-direction: row;
+    grid-gap: 26px;
+    margin-bottom: 30px;
+    .textarea-input {
+      flex: 1;
+    }
+  }
+  &-password {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+  }
+  &-coin {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 13px;
+
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    &__icon {
+      width: 32px;
+      height: 32px;
+      img {
+        display: block;
+      }
+    }
+    &__name {
+      font-size: 16px;
+      font-weight: 300;
+      &-hl {
+        font-weight: 700;
+      }
+    }
+  }
+  &-label {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+  }
+  &-absolute {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1.6px;
+  }
+  input {
+    border: 1px solid rgba(var(--cl-1), .2);
+    border-radius: 200px;
+    padding: 20px;
+    background-color: transparent;
+    color: rgba(var(--cl-1), 1);
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1.6px;
+    &::placeholder {
+      color: inherit;
+      font-size: 16px;
+      letter-spacing: inherit;
+    }
+  }
+  &-input {
+    position: relative;
+    &--padding {
+      input {
+        padding: 1.25rem 7.5rem 1.25rem 1.25rem;
+      }
+    }
+  }
+}
+.checkbox {
+  input {
+    width: 54px;
+    height: 30px;
+    position: relative;
+    background-color: #BEBFE3;
+    transition: all 300ms var(--delay-transition);
+    border-radius: 90px;
+    appearance: none;
+    cursor: pointer;
+    margin: 0;
+    &::after {
+      @include pseudo;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #6E46E5;
+      transition: inherit;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 7px;
+    }
+    &:checked {
+      background-color: #420DBD;
+      &::after {
+        left: 27px;
+      }
+    }
+  }
+}
+
+.dark-theme {
+  .checkbox {
+    input {
+      background-color: #041B2D;
+      &:checked {
+        background-color: #420DBD;
+      }
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  input {
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.2);
+  }
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+
+  transition: all 300ms ease;
+
+  pointer-events: none;
+  visibility: hidden;
+
+  background-color: rgba(0,0,0, .8);
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  &-container {
+    padding: 16px;
+  }
+  .textarea {
+    margin-bottom: 30px;
+    &-label {
+      margin-bottom: 10px;
+    }
+  }
+  .button {
+    min-width: 220px;
+    margin: auto auto 0 auto;
+  }
+  &-close {
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+  &-rows {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    margin-bottom: 20px;
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 17px;
+      letter-spacing: 1.7px;
+    }
+  }
+  &-overlay {
+    width: 100%;
+    height: 100%;
+  }
+  &-container {
+    width: 100%;
+    height: 100%;
+    @include dfc;
+  }
+  &-heading {
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 34px;
+  }
+  &-body {
+    display: flex;
+    flex-direction: column;
+    background-color: #00034B;
+    border: 10px solid rgba(25, 37, 323, .3);
+    border-radius: 30px;
+    padding: 50px clamp(24px, 60vw, 60px);
+
+    width: 100%;
+    max-width: 630px;
+    min-height: 480px;
+
+    position: relative;
+
+    &::after {
+      @include pseudo;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 92.5%;
+      height: 92.5%;
+      background-image: url('../../img/modalOverlay.png');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+  }
+}
+
+@include tablet {
+  .modal {
+    &-body {
+      padding: 2rem 1rem;
+    }
+  }
+}
