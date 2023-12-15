@@ -10,35 +10,29 @@ const modalTrigger = document.querySelector('.modal-trigger');
 const modalClose = document.querySelector('.modal-close');
 const modal = document.querySelector('.modal');
 
-modalTrigger.addEventListener('click', () => {
-  modal.classList.add('modal--active');
-  document.body.style.overflow = 'hidden';
-})
 
-modalClose.addEventListener('click', () => {
-  modal.classList.remove('modal--active')
-  document.body.style.overflow = '';
-})
+if (walletTabsButtons.length > 0) {
+  walletTabsButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      const currentButtonIndex = button.getAttribute('data-button');
+      const currentContentIndex = walletTabsContent[index].getAttribute('data-content');
 
-walletTabsButtons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    const currentButtonIndex = button.getAttribute('data-button');
-    const currentContentIndex = walletTabsContent[index].getAttribute('data-content');
+      if (currentButtonIndex === currentContentIndex) {
 
-    if (currentButtonIndex === currentContentIndex) {
+        walletTabsButtons.forEach((btn) => {
+          btn.classList.remove('wallet-tabs__item--active');
+        });
+        walletTabsContent.forEach((content) => {
+          content.classList.remove('wallet-content--active');
+        });
 
-      walletTabsButtons.forEach((btn) => {
-        btn.classList.remove('wallet-tabs__item--active');
-      });
-      walletTabsContent.forEach((content) => {
-        content.classList.remove('wallet-content--active');
-      });
-
-      button.classList.add('wallet-tabs__item--active');
-      walletTabsContent[index].classList.add('wallet-content--active');
-    }
+        button.classList.add('wallet-tabs__item--active');
+        walletTabsContent[index].classList.add('wallet-content--active');
+      }
+    });
   });
-});
+}
+
 headerMenu.addEventListener('click', () => {
   headerMenu.classList.toggle('header-menu--active');
 
@@ -66,6 +60,19 @@ const toggleTheme = () => {
     sunThemeButton.classList.add('header-theme__item--active');
   }
 };
+
+if (modal) {
+  modalTrigger.addEventListener('click', () => {
+    modal.classList.add('modal--active');
+    document.body.style.overflow = 'hidden';
+  })
+
+  modalClose.addEventListener('click', () => {
+    modal.classList.remove('modal--active')
+    document.body.style.overflow = '';
+  })
+
+}
 
 themeItems.forEach(item => {
   item.addEventListener('click', toggleTheme);
