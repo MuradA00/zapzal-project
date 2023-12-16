@@ -3,12 +3,12 @@
   min-height:  700px;
   &-body {
     display: grid;
-    grid-template-columns: .55fr .45fr;
+    grid-template-columns: .525fr .475fr;
     grid-gap: clamp(40px, 5vw, 80px)
   }
   &-widget {
-    border: 0.625rem solid rgba(var(--cl-bl), .5);
-    background-color: rgba(var(--cl-bl), .3);
+    border: 0.625rem solid rgba(var(--cl-bl), .1);
+    background-color: rgba(var(--cl-bl), .05);
     border-radius: 30px;
     padding: 42px 30px 52px 30px;
     display: flex;
@@ -85,6 +85,15 @@
       &__text {
         max-width: 100%;
       }
+    }
+  }
+}
+
+.dark-theme {
+  .content {
+    &-widget {
+      border: 10px solid rgba(var(--cl-bl), .3);
+      background-color: rgba(var(--cl-bl), .3);
     }
   }
 }

@@ -55,6 +55,11 @@
       &--no-border {
         border-bottom: none;
       }
+      &-icon {
+        svg {
+          fill: rgba(var(--cl-bl), 1);
+        }
+      }
       &::after {
         display: none;
       }
@@ -178,6 +183,14 @@
   .settings {
     &-panel {
       background-color: rgba(var(--cl-bl), 0.3);
+
+      &__item {
+        &-icon {
+          svg {
+            fill: rgba(var(--cl-y), 1);
+          }
+        }
+      }
     }
   }
 }
