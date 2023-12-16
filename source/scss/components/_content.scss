@@ -19,6 +19,7 @@
       font-weight: 900;
       letter-spacing: 3px;
       font-size: clamp(25px, 1.875vw, 30px);
+
     }
     &__iframe {
       display: flex;
@@ -43,6 +44,23 @@
       letter-spacing: 11px;
       text-transform: uppercase;
       margin-bottom: 1rem;
+      position: relative;
+
+      &::after {
+        @include pseudo;
+
+        width: 96px;
+        height: 26px;
+        background-image: url('../../img/headingFrame.svg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        right: 20px;
+        top: 18px;
+
+        @include laptop {
+          display: none;
+        }
+      }
       &-hl {
         color: rgba(var(--cl-y), 1);
       }
