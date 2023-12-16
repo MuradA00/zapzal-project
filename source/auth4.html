@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="En-en" class="dark-theme">
+@include('partials/head.html')
+<body>
+  @include('partials/menu.html')
+  @include('partials/header.html')
+  <div class="single-overlay">
+    <img src="img/singlePageOverlay.svg" alt="">
+  </div>
+  <main>
+    <div class="bubble bubble--bottom"></div>
+    <div class="bubble bubble--top bubble--smaller "></div>
+    <div class="bubble bubble--left"></div>
+    <div class="bubble bubble--right "></div>
+
+    <div class="auth">
+      <div class="auth-container container">
+        <div class="auth-main">
+          <div class="auth-box auth-box--rounded">
+            <div class="auth-heading">
+                Welcome back!
+            </div>
+            <div class="auth-info auth-info--center">
+              <p class="def-text">
+                Unlock your Zapzal Wallet with your password.
+              </p>
+            </div>
+            <div class="auth-form">
+              <div class="textarea-input textarea-input--padding">
+                <div class="settings-browse__password-input textarea">
+                  <button class="textarea-absolute textarea-secure">
+                    <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M458.208 117.504 264.726 2.399a17.07 17.07 0 0 0-17.451 0L53.792 117.504a17.07 17.07 0 0 0-8.341 14.668v65.707c0 138.394 79.96 264.796 204.387 312.97a17.067 17.067 0 0 0 12.324 0c124.125-48.054 204.386-174.182 204.386-312.97v-65.707a17.064 17.064 0 0 0-8.34-14.668zM340.317 217.65 233.352 324.616c-6.665 6.665-17.471 6.665-24.136 0l-37.54-37.539c-6.665-6.664-6.665-17.471 0-24.136 6.665-6.664 17.472-6.664 24.136 0l25.471 25.471 94.898-94.898c6.664-6.664 17.471-6.664 24.136 0 6.666 6.666 6.666 17.472 0 24.136z" fill="" opacity="1" data-original=""></path></g></svg>
+                    <span>Secure encryption</span>
+                  </button>
+                  <input type="password" placeholder="Password">
+                </div>
+              </div>
+            </div>
+            <div class="auth-options">
+              <a href="#" class="auth-options__back">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 492 492" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M198.608 246.104 382.664 62.04c5.068-5.056 7.856-11.816 7.856-19.024 0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12C361.476 2.792 354.712 0 347.504 0s-13.964 2.792-19.028 7.864L109.328 227.008c-5.084 5.08-7.868 11.868-7.848 19.084-.02 7.248 2.76 14.028 7.848 19.112l218.944 218.932c5.064 5.072 11.82 7.864 19.032 7.864 7.208 0 13.964-2.792 19.032-7.864l16.124-16.12c10.492-10.492 10.492-27.572 0-38.06L198.608 246.104z" fill="" opacity="1" data-original=""></path></g></svg>
+                <span>Back</span>
+              </a>
+              <button class="button">
+                <span class="button-text">
+                  Unlock
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  @include('partials/footer.html')
+  <script src="js/main.js"></script>
+</body>
+
+</html>
+

@@ -199,6 +199,17 @@
     transform: translateY(-50%);
     right: 30px;
   }
+  &-secure {
+    display: flex;
+    align-items: center;
+    grid-gap: 0.5rem;
+    span {
+      color: rgba(var(--cl-bl), 1);
+    }
+    svg {
+      fill: rgba(var(--cl-bl), 1);
+    }
+  }
   &-coin {
     position: absolute;
     top: 50%;
@@ -293,6 +304,19 @@
 }
 
 .dark-theme {
+  .textarea {
+    &-secure {
+      display: flex;
+      align-items: center;
+      grid-gap: 0.5rem;
+      span {
+        color: rgba(var(--cl-y), 1);
+      }
+      svg {
+        fill: rgba(var(--cl-y), 1);
+      }
+    }
+  }
   .checkbox {
     input {
       background-color: #041B2D;
