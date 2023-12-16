@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="En-en" class="dark-theme">
+@include('partials/head.html')
+<body>
+  @include('partials/menu.html')
+  @include('partials/header.html')
+  <div class="single-overlay">
+    <img src="img/singlePageOverlay.svg" alt="">
+  </div>
+  <main>
+    <div class="bubble bubble--bottom"></div>
+    <div class="bubble bubble--top bubble--smaller "></div>
+    <div class="bubble bubble--left"></div>
+    <div class="bubble bubble--right "></div>
+
+    <div class="auth">
+      <div class="auth-container container">
+        <div class="auth-main">
+          <div class="auth-box">
+            <div class="auth-heading">
+              Hello and welcome to Zapzal Wallet!
+            </div>
+            <div class="auth-info">
+              <p class="def-text">
+                Our wallet offers seamless access to your cryptocurrencies and allows you to engage with blockchain technology effortlessly. It's essential to note that Zapzal prioritizes your security, and we want to assure you that we do not have access to your funds.
+              </p>
+              <p class="def-text">
+                Whether you're looking to restore your existing Zapzal Wallet or import a private key from another wallet to create a new one, you can get started right away! Your cryptocurrency management is at your fingertips with Zapzal.
+              </p>
+            </div>
+            <div class="auth-actions">
+              <button class="button">
+                <span class="button-text">
+                  Create a new wallet
+                </span>
+              </button>
+              <button class="button">
+                <span class="button-text">
+                  Restore or import
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="auth-guide">
+            <a href="https://support.zapzal.com/article/5-what-is-Zapzal" target="_blank" class="auth-guide__item">
+              <span class="auth-guide__point"></span>
+              What exactly is Zapzal Wallet?
+            </a>
+            <a
+            href="https://support.zapzal.com/article/41-how-to-import-a-wallet-with-its-private-key-"
+            target="_blank" class="auth-guide__item">
+              <span class="auth-guide__point"></span>
+              How to import another wallet here?
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  @include('partials/footer.html')
+  <script src="js/main.js"></script>
+</body>
+
+</html>
+
